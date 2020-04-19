@@ -407,8 +407,8 @@ func (f *File) writeToBuffer(indent string) (*bytes.Buffer, error) {
 				// Support multiline comments
 				lines := strings.Split(key.Comment, LineBreak)
 				for i := range lines {
-					if lines[i][0] != '#' && lines[i][0] != ';' {
-						lines[i] = "; " + strings.TrimSpace(lines[i])
+					if len(lines[i]) == 0 || (lines[i][0] != '#' && lines[i][0] != ';') {
+						lines[i] = f.options.CommentSymbol + " " + strings.TrimSpace(lines[i])
 					} else {
 						lines[i] = lines[i][:1] + " " + strings.TrimSpace(lines[i][1:])
 					}
