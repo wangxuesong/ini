@@ -21,7 +21,7 @@ import (
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
-	"gopkg.in/ini.v1"
+	"github.com/wangxuesong/ini"
 )
 
 func TestEmpty(t *testing.T) {

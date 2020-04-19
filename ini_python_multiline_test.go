@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
-	"gopkg.in/ini.v1"
+	"github.com/wangxuesong/ini"
 )
 
 type testData struct {

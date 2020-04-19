@@ -117,6 +117,8 @@ type LoadOptions struct {
 	ReaderBufferSize int
 	// AllowNonUniqueSections indicates whether to allow sections with the same name multiple times.
 	AllowNonUniqueSections bool
+	// CommentSymbol indicates the comment symbol. The default is ";"
+	CommentSymbol string
 }
 
 // DebugFunc is the type of function called to log parse events.
